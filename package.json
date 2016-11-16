@@ -1,0 +1,31 @@
+{
+  "name": "angular-firebase",
+  "version": "1.0.0",
+  "description": "Proviamo ad utilizzare Firebase con Angular JS",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "firebase": "^3.6.1",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giuseppegarbin/angular-firebase.git"
+  },
+  "keywords": [
+    "angular",
+    "firebase"
+  ],
+  "author": "Giuseppe Garbin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giuseppegarbin/angular-firebase/issues"
+  },
+  "homepage": "https://github.com/giuseppegarbin/angular-firebase#readme"
+}
