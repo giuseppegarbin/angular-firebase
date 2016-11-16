@@ -9,24 +9,12 @@ angular.
                     hashPrefix('!');
 
                 $routeProvider.
-                    when('/home', {
-                        template: '<home-page></home-page>'
+                    when('/projects', {
+                        template: '<projects></projects>'
                     }).
-                    when('/about', {
-                        template: '<about-me></about-me>'
+                    when('/projects/:projectId', {
+                        template: '<project-tasks></project-tasks>'
                     }).
-                    when('/blog', {
-                        template: '<blog-index></blog-index>'
-                    }).
-                    when('/blog/:postId', {
-                        template: '<blog-post></blog-post>'
-                    }).
-                    when('/categorie', {
-                        template: '<blog-categories></blog-categories>'
-                    }).
-                    when('/categorie/:categoryId', {
-                        template: '<blog-category></blog-category>'
-                    }).
-                    otherwise('/home');
+                    otherwise('/projects');
             }
 ]);

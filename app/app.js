@@ -1,18 +1,23 @@
 'use strict';
 
 var meetAngular = angular.module('meetAngular', [
-    'meetAngularHome',
-    'meetAngularAbout',
-    'meetAngularBlog',
-    'meetAngularBlogPost',
-    'meetAngularBlogCategories',
-    'meetAngularBlogCategory',
+    'meetAngularProjects',
+    'meetAngularTasks',
+    'firebase',
     'ngRoute'
 ]);
 
-meetAngular.controller('MenuController', function($scope, $location) {
-    $scope.menuClass = function(page) {
-        var current = $location.path().substring(1);
-        return page === current ? "active" : "";
-    };
+var config = {
+    apiKey: "AIzaSyAE01ncWIFEQGFfgKMBUmEN5ya69v6OtiI",
+    authDomain: "meet-angular.firebaseapp.com",
+    databaseURL: "https://meet-angular.firebaseio.com",
+    storageBucket: "meet-angular.appspot.com",
+    messagingSenderId: "486967478800"
+};
+firebase.initializeApp(config);
+
+meetAngular.controller('SiteController', function($firebaseObject) {
+    const rootRef = firebase.database().ref();
+    const refUsers = rootRef.child('users');
+    this.object = $firebaseObject(refUsers);
 });

@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="list-group">
+                <a ng-repeat="(key, task) in $ctrl.tasks" ng-href="#!/tasks/{{key}}" class="list-group-item">{{task}}</a>
+            </div>
+        </div>
+    </div>
+</div>
